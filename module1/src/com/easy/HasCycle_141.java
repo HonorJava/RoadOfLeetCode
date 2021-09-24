@@ -6,7 +6,7 @@ import com.entity.ListNode;
  * @author firstGrass
  * @create 2021-09-9:52 下午
  */
-public class HasCycle {
+public class HasCycle_141 {
     public static void main(String[] args) {
         ListNode head = new ListNode(3);
         ListNode head1 = new ListNode(2);

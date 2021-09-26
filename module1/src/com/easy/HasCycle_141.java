@@ -10,16 +10,10 @@ import java.util.HashSet;
  */
 public class HasCycle_141 {
     public static void main(String[] args) {
-        ListNode head = new ListNode(3);
-        ListNode head1 = new ListNode(2);
-        ListNode head2 = new ListNode(0);
-        ListNode head3 = new ListNode(-4);
-        head.next = head1;
-        head1.next = head2;
-        head2.next = head3;
-        head3.next = head1;
+        ListNode head = new ListNode().init();
         System.out.println(hasCycle(head));
     }
+
     public static boolean hasCycle(ListNode head) {
 //        1、快慢指针，让快指针先走一步，然后同时走，如果相遇即存在环
         /*
@@ -47,5 +41,18 @@ public class HasCycle_141 {
             head = head.next;
         }
         return false;
+        /*
+        3、递归
+        class HasCycleInLinkedList{
+            public boolean hasCycle(ListNode head){
+               if(head == null || head.next == null) return false;
+               if(head.next == head) return true;
+               ListNode nextNode = head.next;
+               head.next = head;
+               boolean isCycle = hasCycle(nextNode);
+               return isCycle;
+            }
+        }
+         */
     }
 }

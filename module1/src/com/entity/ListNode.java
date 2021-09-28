@@ -6,7 +6,7 @@ package com.entity;
  * @create 2021-09-9:57 下午
  */
 public class ListNode {
-    private int val;
+    public int val;
     public ListNode next;
     public ListNode() {}
     public ListNode(int x) {
@@ -22,9 +22,6 @@ public class ListNode {
         return val;
     }
 
-    public void setVal(int val) {
-        this.val = val;
-    }
     public ListNode init() {
         ListNode head = new ListNode(1);
         ListNode head1 = new ListNode(2);
